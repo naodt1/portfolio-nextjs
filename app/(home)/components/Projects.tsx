@@ -5,6 +5,7 @@ import {
   SiMaterialdesign,
   SiMongodb,
   SiNodedotjs,
+  SiReact
 } from "react-icons/si";
 import Title from "./Title";
 import Link from "next/link";
