@@ -13,6 +13,19 @@ import Image from "next/image";
 export default function Projects() {
   const projects = [
     {
+  title: "Intraverse Africa",
+  tech: [SiReact, SiNodedotjs],
+  cover: "/intraverse-africa.jpg", // You can replace with the actual cover image path
+  link: "https://intraverse.africa",
+  description:
+    "Intraverse Africa is a travel-as-a-Service platform with a modern infrastructure designed to deliver unparalleled travel experiences, simplify travel management, and accelerate innovation in the travel industry.",
+  icons: [
+    <SiReact key="react" />,
+    <SiNodedotjs key="nodejs" />,
+  ],
+}
+,
+    {
       title: "Debbol Food Delivery",
       tech: [SiFlutter, SiMaterialdesign],
       cover: "/debbol.png",
