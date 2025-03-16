@@ -58,7 +58,7 @@ export default function Projects() {
       title: "Keepr Password Manager",
       tech: [SiFlutter, SiFirebase],
       cover: "/keepr-pass.jpg",
-      link: "https://github.com/kronahs/keepr-password-manager",
+      link: "https://github.com/naodt1/keepr-password-manager",
       description:
         "Keepr is a robust password manager designed to safeguard your digital security with advanced encryption and multi-factor authentication.",
       icons: [<SiFlutter key="flutter" />, <SiFirebase key="firebase" />],
@@ -67,7 +67,7 @@ export default function Projects() {
       title: "Convo Chat-App",
       tech: [SiFlutter, SiFirebase],
       cover: "/convo-chat.jpg",
-      link: "https://github.com/kronahs/convo-messaging-app",
+      link: "https://github.com/naodt1/convo-app",
       description:
         "Convo is a messaging application inspired by the functionality of platforms like Telegram. It serves as a reliable communication tool, facilitating seamless connections between users across the globe.",
       icons: [<SiFlutter key="flutter" />, <SiFirebase key="firebase" />],
@@ -76,7 +76,7 @@ export default function Projects() {
       title: "FixMasters",
       tech: [SiFlutter, SiFirebase],
       cover: "/fixmasters.png",
-      link: "https://github.com/kronahs/fixmasters_user_app",
+      link: "https://github.com/naodt1/fixmasters-user-app",
       description:
         "FixMasters connects users with the nearest handyman based on the service they provide. Users can communicate with handyman through its chat feature. Handyman can check their bookings and manage their services called gigs.",
       icons: [<SiFlutter key="flutter" />, <SiFirebase key="firebase" />],

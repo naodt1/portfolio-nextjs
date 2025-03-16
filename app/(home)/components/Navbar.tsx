@@ -6,20 +6,20 @@ import { SiGithub, SiLinkedin, SiX } from "react-icons/si";
 export default function Navbar({className}: {className?:string}){
     const socials = [
         {
-            link: "https://www.linkedin.com/in/naod-tadele-063b23119/",
+            link: "https://www.linkedin.com/in/naod-tadel/",
             label: "Linkedin",
             Icon: SiLinkedin,
         },
         {
-            link: "https://github.com/kronahs",
+            link: "https://github.com/naodt1",
             label: "GitHub",
             Icon: SiGithub ,
         },
-        {
-            link: "https://twitter.com/naod_tadele1",
-            label: "X",
-            Icon: SiX,
-        }
+        // {
+        //     link: "https://twitter.com/naod_tadele1",
+        //     label: "X",
+        //     Icon: SiX,
+        // }
     ];
 
 
@@ -29,9 +29,9 @@ export default function Navbar({className}: {className?:string}){
             {socials.map((social,index) => {
                 const Icon = social.Icon;
 
-                return <Link href={social.link} key={index} aria-label={social.label}>
-                    <Icon className="w-5 h-5 hover:scale-125 transition-all"/>
-                </Link>
+                return  <a href={social.link} target="_blank" rel="noopener noreferrer" key={index} aria-label={social.label}>
+                <Icon className="w-5 h-5 hover:scale-125 transition-all" />
+            </a>
             })}
         </div>
     </nav>
