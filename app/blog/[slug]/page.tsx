@@ -138,7 +138,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <div className="flex items-center gap-4">
                 <time className="text-gray-500 text-sm">{formatDate(post.date)}</time>
                 <div className="flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-indigo-500 flex items-center justify-center text-xs font-bold text-black">
+                  <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-xs font-bold text-black">
                     N
                   </div>
                   <span className="text-gray-400 text-sm">Naod Tadele</span>

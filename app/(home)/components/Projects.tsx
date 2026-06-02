@@ -63,8 +63,6 @@ function ProjectModal({
             className="w-full max-h-[60vh] object-contain"
             priority
           />
-          {/* Gradient fade into card body */}
-          <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-gray-900 to-transparent" />
 
           {/* Close button */}
           <button

@@ -34,7 +34,7 @@ export default function BlogPage() {
               <Link key={post.slug} href={`/blog/${post.slug}`}>
                 <article className="rounded-md cursor-pointer transition-transform transform hover:scale-105 bg-gray-900 text-white overflow-hidden h-full flex flex-col">
                   {/* Top accent bar */}
-                  <div className="h-1 bg-gradient-to-r from-green-500 to-indigo-500" />
+                  <div className="h-1 bg-green-500" />
 
                   <div className="p-6 flex flex-col flex-1">
                     {/* Tags */}
