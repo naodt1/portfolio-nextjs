@@ -21,7 +21,7 @@ The story spread everywhere. Psychologists [John Darley and Bibb Latané](https:
 
 There is just one problem. The story was largely a myth.
 
-![38 witnesses, reportedly](https://i.kym-cdn.com/photos/images/newsfeed/001/401/347/312.jpg)
+![38 witnesses, reportedly](/memes/this-is-fine.jpg)
 38 witnesses. Nobody called. Except — that's not really what happened.
 
 # The 38 Witnesses Who Never Were
@@ -58,7 +58,7 @@ That is eerily close to [pluralistic ignorance](https://en.wikipedia.org/wiki/Pl
 
 That gap is exactly what our research is designed to fill.
 
-![AI agents learning from humans](https://i.kym-cdn.com/photos/images/newsfeed/001/240/075/90f.jpg)
+![AI agents learning from humans](/memes/spiderman-pointing.gif)
 Turns out training on human data means inheriting human problems too.
 
 # What We Are Building
@@ -94,7 +94,7 @@ Most cross-platform tools promise write-once, run-anywhere but deliver a comprom
 
 When I built Debbol, having a single codebase that ran identically on both platforms cut my development time roughly in half compared to what a native approach would have taken.
 
-![why not both](https://i.kym-cdn.com/photos/images/newsfeed/000/993/394/ca6.gif)
+![why not both](/memes/why-not-both.gif)
 iOS and Android. At the same time. From one codebase.
 
 # Dart Is Underrated
@@ -128,7 +128,7 @@ The hardest part of building a [two-sided marketplace](https://en.wikipedia.org/
 
 I ended up building effectively two apps that share a backend — a user-facing app and a handyman dashboard. Keeping the UX coherent across both while serving different mental models was the biggest design challenge I've faced.
 
-![users vs handymen](https://i.kym-cdn.com/photos/images/newsfeed/001/240/075/90f.jpg)
+![users vs handymen](/memes/spiderman-pointing.gif)
 Two completely different users. One app. What could go wrong.
 
 # Firebase Was the Right Backend Call
