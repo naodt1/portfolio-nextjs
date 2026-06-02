@@ -15,11 +15,14 @@ export const posts: Post[] = [
     summary:
       "A 1968 experiment, a murdered woman, 38 witnesses who did nothing, and a myth that shaped psychology for 50 years. Now we're asking the same question about AI — and the answer might expose something uncomfortable about how we build multi-agent systems.",
     tags: ["AI", "Research", "Social Psychology", "LLMs"],
-    content: `On March 13, 1964, a young woman named Kitty Genovese was attacked and killed outside her apartment building in New York City. A newspaper report claimed 38 neighbours witnessed the attack from their windows. Not one called the police. Not one intervened.
+    content: `On March 13, 1964, a young woman named [Kitty Genovese](https://en.wikipedia.org/wiki/Murder_of_Kitty_Genovese) was attacked and killed outside her apartment building in New York City. A newspaper report claimed 38 neighbours witnessed the attack from their windows. Not one called the police. Not one intervened.
 
-The story spread everywhere. Psychologists John Darley and Bibb Latane used it to anchor one of social psychology's most famous findings: the bystander effect. The more people present during an emergency, the less likely any individual is to help. Diffusion of responsibility. Pluralistic ignorance. Evaluation apprehension. These became textbook concepts, taught in university courses for decades.
+The story spread everywhere. Psychologists [John Darley and Bibb Latané](https://en.wikipedia.org/wiki/Bystander_effect#History) used it to anchor one of social psychology's most famous findings: the [bystander effect](https://en.wikipedia.org/wiki/Bystander_effect). The more people present during an emergency, the less likely any individual is to help. [Diffusion of responsibility](https://en.wikipedia.org/wiki/Diffusion_of_responsibility). [Pluralistic ignorance](https://en.wikipedia.org/wiki/Pluralistic_ignorance). [Evaluation apprehension](https://en.wikipedia.org/wiki/Evaluation_apprehension). These became textbook concepts, taught in university courses for decades.
 
 There is just one problem. The story was largely a myth.
+
+![38 witnesses, reportedly](https://i.kym-cdn.com/photos/images/newsfeed/001/401/347/312.jpg)
+38 witnesses. Nobody called. Except — that's not really what happened.
 
 # The 38 Witnesses Who Never Were
 
@@ -31,33 +34,36 @@ So which is it? Does the crowd paralyse us or mobilise us?
 
 # Context Changes Everything
 
-A 2011 meta-analysis of 105 studies over 40 years offered a more nuanced answer. The bystander effect is real, but it is highly context-dependent. In ambiguous situations — someone sitting oddly on a bench, papers scattered on the floor — people look to each other for cues, see no one acting, and conclude nothing is wrong. Classic diffusion of responsibility kicks in.
+A 2011 meta-analysis of 105 studies over 40 years offered a more nuanced answer. The bystander effect is real, but it is highly context-dependent. In ambiguous situations — someone sitting oddly on a bench, papers scattered on the floor — people look to each other for cues, see no one acting, and conclude nothing is wrong. Classic [diffusion of responsibility](https://en.wikipedia.org/wiki/Diffusion_of_responsibility) kicks in.
 
-In clearly dangerous situations — a fire, a physical attack, someone collapsing — the effect sharply weakens or disappears entirely. The crowd becomes an asset, not a liability. People coordinate. The same group dynamics that can cause paralysis in uncertainty seem to accelerate action when the threat is obvious.
+In clearly dangerous situations — a fire, a physical attack, someone collapsing — the effect sharply weakens or disappears entirely. The crowd becomes an asset, not a liability. The same group dynamics that can cause paralysis in uncertainty seem to accelerate action when the threat is obvious.
 
 This matters, because it changes the question we should be asking about AI.
 
 # The Question We Are Actually Asking
 
-LLMs are trained on enormous corpora of human-generated text — everything from news articles to forum threads to literary fiction. In doing so, they absorb patterns of human social behaviour, including our hesitations, our deference to others, our tendency to read a room before acting.
+[Large language models](https://en.wikipedia.org/wiki/Large_language_model) are trained on enormous corpora of human-generated text — everything from news articles to forum threads to literary fiction. In doing so, they absorb patterns of human social behaviour, including our hesitations, our deference to others, our tendency to read a room before acting.
 
 So here is the question we are investigating: if you put a group of LLM-based agents into a simulated emergency, do they behave like humans? Do they show the bystander effect?
 
-This is not a trivial question. Multi-agent AI systems are increasingly being deployed in high-stakes contexts — collaborative medical diagnosis, emergency response coordination, content moderation at scale. If these systems silently inherit the same social dynamics that cause humans to freeze in crowds, that is a serious design vulnerability. And until now, nobody has directly tested it.
+This is not a trivial question. [Multi-agent AI systems](https://en.wikipedia.org/wiki/Multi-agent_system) are increasingly being deployed in high-stakes contexts — collaborative medical diagnosis, emergency response coordination, content moderation at scale. If these systems silently inherit the same social dynamics that cause humans to freeze in crowds, that is a serious design vulnerability. And until now, nobody has directly tested it.
 
 # What We Already Know (And Why It Is Not Enough)
 
-A study published this year by Shehata and Li found something striking. When they ran 22,500 simulated reasoning tasks across LLM swarms, they found that as the group size grew, individual reasoning accuracy collapsed. They called it cognitive loafing — agents deferring to the group rather than committing to their own internally correct answer.
+A study published this year found something striking. When researchers ran 22,500 simulated reasoning tasks across LLM swarms, they found that as the group size grew, individual reasoning accuracy collapsed. They called it [cognitive loafing](https://en.wikipedia.org/wiki/Social_loafing) — agents deferring to the group rather than committing to their own internally correct answer.
 
 They introduced the term Sovereignty Gap to describe the moment when an agent knows the right answer but suppresses it to appease the simulated consensus. The first agent to speak — the Lead Anchor — disproportionately shapes what every other agent does. One confident wrong voice, and the whole swarm follows.
 
-That is eerily close to pluralistic ignorance. But it was tested on abstract reasoning tasks: logic problems, code debugging. Nobody has tested it on emergency intervention scenarios — the kind that directly mirror the original Darley and Latane experiments.
+That is eerily close to [pluralistic ignorance](https://en.wikipedia.org/wiki/Pluralistic_ignorance). But it was tested on abstract reasoning tasks: logic problems, code debugging. Nobody has tested it on emergency intervention scenarios — the kind that directly mirror the original Darley and Latané experiments.
 
 That gap is exactly what our research is designed to fill.
 
+![AI agents learning from humans](https://i.kym-cdn.com/photos/images/newsfeed/001/240/075/90f.jpg)
+Turns out training on human data means inheriting human problems too.
+
 # What We Are Building
 
-I am working on this with a collaborator at Bauhaus-Universitat Weimar. Together we are building an agent-based simulation where LLM agents are placed into emergency scenarios of varying severity. One agent plays the victim. The rest are bystanders — each generating internal thoughts and external responses, visible to the user.
+I am working on this with a collaborator at [Bauhaus-Universität Weimar](https://en.wikipedia.org/wiki/Bauhaus-Universit%C3%A4t_Weimar). Together we are building an [agent-based simulation](https://en.wikipedia.org/wiki/Agent-based_model) where LLM agents are placed into emergency scenarios of varying severity. One agent plays the victim. The rest are bystanders — each generating internal thoughts and external responses, visible to the user.
 
 We are systematically varying the conditions that matter: group size, danger level, gender composition of the agent profiles, and whether agents have professional qualifications like medical training. We want to know whether the classic bystander mechanisms show up in the agents' internal reasoning — whether we can observe an agent literally thinking something like "someone else will handle it" or "I don't want to make a mistake in front of the others."
 
@@ -80,23 +86,26 @@ We are trying to find out.`,
     summary:
       "Flutter changed how I build apps. Here's why I picked it over React Native and native development — and haven't looked back.",
     tags: ["Flutter", "Mobile", "Opinion"],
-    content: `After spending time exploring React Native and native Android development, I landed on Flutter — and it's been the right call for everything I've built since.
+    content: `After spending time exploring [React Native](https://en.wikipedia.org/wiki/React_Native) and native Android development, I landed on [Flutter](https://en.wikipedia.org/wiki/Flutter_(software)) — and it's been the right call for everything I've built since.
 
 # The Cross-Platform Promise (That Actually Works)
 
-Most cross-platform tools promise write-once, run-anywhere but deliver a compromised experience on both platforms. Flutter is different. It renders its own widgets directly to a canvas using Skia (now Impeller), so the UI is pixel-perfect and identical on iOS and Android. No native component wrappers, no platform inconsistencies.
+Most cross-platform tools promise write-once, run-anywhere but deliver a compromised experience on both platforms. Flutter is different. It renders its own widgets directly to a canvas using [Skia](https://en.wikipedia.org/wiki/Skia_Graphics_Engine) (now [Impeller](https://docs.flutter.dev/perf/impeller)), so the UI is pixel-perfect and identical on iOS and Android. No native component wrappers, no platform inconsistencies.
 
 When I built Debbol, having a single codebase that ran identically on both platforms cut my development time roughly in half compared to what a native approach would have taken.
 
+![why not both](https://i.kym-cdn.com/photos/images/newsfeed/000/993/394/ca6.gif)
+iOS and Android. At the same time. From one codebase.
+
 # Dart Is Underrated
 
-I was skeptical about Dart at first. It felt like an unnecessary detour when JavaScript already exists. But after a few weeks with it, I genuinely enjoy it. It's typed by default, has excellent null safety, and compiles to native ARM code. The syntax is clean and familiar if you know Java or TypeScript.
+I was skeptical about [Dart](https://en.wikipedia.org/wiki/Dart_(programming_language)) at first. It felt like an unnecessary detour when JavaScript already exists. But after a few weeks with it, I genuinely enjoy it. It's typed by default, has excellent [null safety](https://dart.dev/null-safety), and compiles to native ARM code. The syntax is clean and familiar if you know Java or TypeScript.
 
 The tooling is also excellent — dart analyze catches errors before I even run the app.
 
 # Hot Reload Is a Superpower
 
-This sounds minor but it changes everything. With Flutter's hot reload, I can tweak a widget, adjust padding, or change a color and see the result in under a second without losing app state. For UI-heavy work like building Keepr's password entry screens, this made iteration dramatically faster.
+This sounds minor but it changes everything. With Flutter's [hot reload](https://docs.flutter.dev/tools/hot-reload), I can tweak a widget, adjust padding, or change a color and see the result in under a second without losing app state. For UI-heavy work like building Keepr's password entry screens, this made iteration dramatically faster.
 
 # When I'd Choose Something Else
 
@@ -115,61 +124,31 @@ But for a solo developer shipping mobile apps? Flutter is the most productive en
 
 # Two Users, Two Apps in One
 
-The hardest part of building a marketplace isn't the code — it's designing for two completely different user types in the same product. Users want simplicity: find someone, book them, done. Handymen want control: manage their gigs, set availability, track bookings.
+The hardest part of building a [two-sided marketplace](https://en.wikipedia.org/wiki/Two-sided_market) isn't the code — it's designing for two completely different user types in the same product. Users want simplicity: find someone, book them, done. Handymen want control: manage their gigs, set availability, track bookings.
 
 I ended up building effectively two apps that share a backend — a user-facing app and a handyman dashboard. Keeping the UX coherent across both while serving different mental models was the biggest design challenge I've faced.
 
+![users vs handymen](https://i.kym-cdn.com/photos/images/newsfeed/001/240/075/90f.jpg)
+Two completely different users. One app. What could go wrong.
+
 # Firebase Was the Right Backend Call
 
-For the scope of FixMasters, Firebase was the right choice. Firestore's real-time listeners made the chat feature straightforward to build — messages appear instantly without polling. Firebase Auth handled the multi-role user system cleanly.
+For the scope of FixMasters, Firebase was the right choice. [Firestore's](https://firebase.google.com/docs/firestore) real-time listeners made the chat feature straightforward to build — messages appear instantly without polling. [Firebase Auth](https://firebase.google.com/docs/auth) handled the multi-role user system cleanly.
 
-The tradeoff is cost predictability at scale. Firestore's read-based pricing can get expensive fast with a busy chat feature. For a larger production app, I'd evaluate a PostgreSQL backend more seriously.
+The tradeoff is cost predictability at scale. Firestore's read-based pricing can get expensive fast with a busy chat feature. For a larger production app, I'd evaluate a [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL) backend more seriously.
 
 # Real-Time Chat Is Deceptively Hard
 
 Chat looks simple from the outside. Under the hood, you're dealing with message ordering, delivery receipts, push notifications, and offline queuing. The Convo project I built separately helped me understand these patterns before I had to implement them in FixMasters.
 
-The key insight: model messages as immutable events, not mutable records. Append-only data structures make conflict resolution trivial.
+The key insight: model messages as immutable events, not mutable records. [Append-only data structures](https://en.wikipedia.org/wiki/Persistent_data_structure) make conflict resolution trivial.
 
 # Location Matching Without Maps
 
-The "nearest handyman" feature doesn't actually use a map UI — it's a background calculation comparing geohashes stored in Firestore. Geohash-based proximity queries are a clever trick that lets you find nearby documents without a dedicated geospatial database. The Mapbox experience from Debbol informed this approach.
+The "nearest handyman" feature doesn't actually use a map UI — it's a background calculation comparing [geohashes](https://en.wikipedia.org/wiki/Geohash) stored in Firestore. Geohash-based proximity queries are a clever trick that lets you find nearby documents without a dedicated geospatial database. The Mapbox experience from Debbol informed this approach.
 
 # What I'd Do Differently
 
 I'd invest more in onboarding for handymen. Getting supply-side users to complete their profile, add their services, and stay engaged is harder than getting demand-side users to place a booking. Onboarding friction kills marketplaces.`,
-  },
-  {
-    slug: "shipping-intraverse-africa",
-    title: "Shipping Intraverse Africa: Notes on Building at Scale",
-    date: "2024-06-10",
-    summary:
-      "Intraverse Africa is the most complex project I've shipped. Moving from mobile apps to a full travel platform taught me how different web-scale engineering is.",
-    tags: ["React", "Node.js", "Web", "Product"],
-    content: `Intraverse Africa is a travel-as-a-Service platform, and building it was a step-change in complexity compared to my previous mobile projects.
-
-# The Shift from Mobile to Web
-
-Mobile apps have a defined surface area. A Flutter app has screens, navigation, and state. Web platforms have routes, APIs, authentication flows, SEO, performance budgets, caching strategies, and more. The surface area is much larger.
-
-The biggest adjustment was thinking in terms of systems rather than screens. A travel platform isn't just a UI — it's a data pipeline that aggregates inventory, a booking engine, a payment flow, and a notification system, all working together.
-
-# React at the Core
-
-For the frontend, React was the natural choice. Component-based architecture made it possible to build complex UI — search results, booking flows, itinerary views — as composable pieces. The ecosystem is mature and the hiring pool is large for a product that will need a team.
-
-I used Next.js for routing and server-side rendering. SEO matters enormously for a travel product — people search for flights and hotels, so your pages need to be crawlable and fast.
-
-# API Design Matters More Than You Think
-
-The backend is a Node.js API, and the design decisions there compound quickly. Poorly designed endpoints create N+1 query problems, over-fetching, and brittle frontend code. I learned to think carefully about what data each screen actually needs and design endpoints around those shapes.
-
-GraphQL would have been interesting here but added complexity I didn't need at this stage.
-
-# What's Next for the Platform
-
-Travel infrastructure is a solved problem in the West but the African market has unique constraints — payment methods, connectivity, local inventory. The opportunity is in building rails that account for those constraints from the start rather than bolting them on later.
-
-That's what makes Intraverse interesting to work on.`,
   },
 ];
